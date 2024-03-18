@@ -8,11 +8,12 @@ import {ValidationPipe} from "@nestjs/common";
 async function bootstrap() {
   const PORT = process.env.PORT || 5000;
   const app = await NestFactory.create(AppModule);
+  app.enableCors();
   const config = new DocumentBuilder()
     .setTitle("API FFGlobal")
     .setDescription("Документация по API Backend сайта FFglobal")
     .setVersion("1.0.0")
-    .addServer("https://ffglobal.ru/7000/api", "Main server side")
+    .addServer("http://localhost/7000/api")
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup("/api/docs", app, document);

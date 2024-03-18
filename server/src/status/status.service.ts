@@ -24,8 +24,4 @@ export class StatusService {
   async getStatusByValue(value: string) {
     return this.statusRepository.findOne({where: {value}});
   }
-
-  async getStatusById(status_id: string) {
-    return this.statusRepository.findByPk(status_id);
-  }
 }

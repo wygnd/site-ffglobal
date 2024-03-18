@@ -10,7 +10,7 @@ export class UserModel extends Model<UserModel> {
     user_id: number;
 
     @ApiProperty({example: "Денис", description: "Имя пользователя"})
-    @Column({type: DataType.STRING, allowNull: false, defaultValue: "username"})
+    @Column({type: DataType.STRING, allowNull: false})
     name: string;
 
     @ApiProperty({example: "example@gmail.ru", description: "Email пользователя"})

@@ -2,6 +2,12 @@
 /dist
 /node_modules
 
+# static files
+/static
+
+# Logs
+.*env
+
 # Logs
 logs
 *.log
@@ -11,19 +17,8 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
-# END files
-.development.env
-.production.env
-
-# server startic files
-/static
-
 # OS
 .DS_Store
-
-# ENV FILE
-.production.env
-.development.env
 
 # Tests
 /coverage

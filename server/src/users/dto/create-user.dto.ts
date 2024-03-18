@@ -3,6 +3,8 @@ import {IsEmail, IsNotEmpty, IsString} from "class-validator";
 
 export class CreateUserDto {
     @ApiProperty({example: "Денис", description: "Имя пользователя"})
+    @IsNotEmpty()
+    @IsString()
     readonly name: string;
 
     @ApiProperty({example: "example@gmail.com", description: "Адресс электронной почты"})

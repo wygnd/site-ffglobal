@@ -17,11 +17,10 @@ export class AuthController {
         return this.authService.signIn(user);
     }
 
-    @ApiOperation({summary: "Регистрация пользователя", deprecated: true})
+    @ApiOperation({summary: "Регистрация пользователя"})
     @ApiResponse({status: 200, type: UserModel})
     @Post('/signup')
     async singUp(@Body() user: CreateUserDto) {
-        // return this.authService.signUp(user);
-        return false;
+        return this.authService.signUp(user);
     }
 }
