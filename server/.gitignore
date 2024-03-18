@@ -5,8 +5,9 @@
 # static files
 /static
 
-# Logs
-.*env
+# Env
+.development.env
+.production.env
 
 # Logs
 logs
